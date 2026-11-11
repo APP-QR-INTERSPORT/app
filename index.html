@@ -1,64 +1,283 @@
+
 <!doctype html>
 <html lang="el">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#174a98">
-<meta name="description" content="Κατέβασε το INTERSPORT App για iPhone ή Android.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174a98">
+  <meta name="description" content="Κατέβασε το INTERSPORT App για iPhone ή Android.">
+  <title>Κατέβασε το INTERSPORT App</title>
 
-<title>Κατέβασε το INTERSPORT App</title>
-<style>
-h1 {
-  font-size: 20px;
-  line-height: 1.2;
-  margin: 28px 0 10px;
-}
-:root{font-family:Arial,Helvetica,sans-serif;color:#17233d}*{box-sizing:border-box}body{margin:0;min-height:100svh;display:grid;place-items:center;background:#f1f5fb;padding:20px}.panel{width:min(100%,430px);padding:40px 25px 30px;text-align:center;background:#fff;border-radius:22px;box-shadow:0 14px 44px #17315a18}.brand-logo{display:block;width:min(100%,290px);height:auto;max-height:110px;object-fit:contain;margin:0 auto}h1{font-size:24px;line-height:1.2;margin:28px 0 10px}p{color:#596579;line-height:1.55;margin:0 0 25px}.stores{display:grid;gap:12px}.store{display:flex;align-items:center;gap:15px;text-align:left;text-decoration:none;background:#101828;color:white;border:2px solid #101828;border-radius:15px;padding:13px 19px;min-height:76px;transition:transform .15s,background .15s}.store--apple{background:#174a98;border-color:#174a98}.store--google{background:#e52b37;border-color:#e52b37}.store:hover{filter:brightness(.9);transform:translateY(-2px)}.store:focus-visible{outline:3px solid #e52b37;outline-offset:3px}.store svg{width:35px;height:35px;flex:none;fill:currentColor}.store small{display:block;font-size:12px;font-weight:400;letter-spacing:.2px;margin-bottom:3px}.store strong{display:block;font-size:21px;letter-spacing:-.4px}.foot{font-size:12px;color:#7a8495;margin-top:28px}@media(prefers-reduced-motion:reduce){.store{transition:none}.store:hover{transform:none}}
-.language-switch{display:flex;justify-content:center;gap:7px;margin:0 0 23px}.language-switch button{border:1px solid #d6deeb;background:#fff;color:#42526c;padding:7px 13px;border-radius:8px;font-weight:700;cursor:pointer}.language-switch button[aria-pressed="true"]{background:#174a98;color:#fff;border-color:#174a98}.language-switch button:focus-visible{outline:3px solid #7daef7;outline-offset:2px}
-</style>
+  <style>
+    :root {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #17233d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      background: #f1f5fb;
+      padding: 20px;
+    }
+
+    .panel {
+      width: min(100%, 430px);
+      padding: 40px 25px 30px;
+      text-align: center;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 14px 44px #17315a18;
+    }
+
+    .brand-logo {
+      display: block;
+      width: min(100%, 290px);
+      height: auto;
+      max-height: 110px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 20px;
+      line-height: 1.2;
+      margin: 28px 0 10px;
+    }
+
+    p {
+      color: #596579;
+      line-height: 1.55;
+      margin: 0 0 25px;
+    }
+
+    .language-switch {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin: 0 0 23px;
+    }
+
+    .language-switch button {
+      border: 1px solid #d6deeb;
+      background: #fff;
+      color: #42526c;
+      padding: 7px 13px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .language-switch button[aria-pressed="true"] {
+      background: #174a98;
+      color: #fff;
+      border-color: #174a98;
+    }
+
+    .language-switch button:focus-visible {
+      outline: 3px solid #7daef7;
+      outline-offset: 2px;
+    }
+
+    .stores {
+      display: grid;
+      gap: 12px;
+    }
+
+    .store {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-align: left;
+      text-decoration: none;
+      color: white;
+      border: 2px solid transparent;
+      border-radius: 15px;
+      padding: 13px 19px;
+      min-height: 76px;
+      transition: transform .15s, filter .15s;
+    }
+
+    .store--apple {
+      background: #174a98;
+      border-color: #174a98;
+    }
+
+    .store--google {
+      background: #e52b37;
+      border-color: #e52b37;
+    }
+
+    .store:hover {
+      filter: brightness(.9);
+      transform: translateY(-2px);
+    }
+
+    .store:focus-visible {
+      outline: 3px solid #e52b37;
+      outline-offset: 3px;
+    }
+
+    .store svg {
+      width: 35px;
+      height: 35px;
+      flex: none;
+      fill: currentColor;
+    }
+
+    .store small {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: .2px;
+      margin-bottom: 3px;
+    }
+
+    .store strong {
+      display: block;
+      font-size: 21px;
+      letter-spacing: -.4px;
+    }
+
+    .foot {
+      font-size: 12px;
+      color: #7a8495;
+      margin-top: 28px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .store {
+        transition: none;
+      }
+      .store:hover {
+        transform: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<main class="panel">
-  <nav class="language-switch" aria-label="Language / Γλώσσα"><button type="button" data-lang="el" aria-pressed="true">ΕΛ</button><button type="button" data-lang="en" aria-pressed="false">EN</button></nav>
-  <img class="brand-logo" src="data:image/webp;base64,UklGRrwMAABXRUJQVlA4WAoAAAAQAAAA4wAAIgAAQUxQSJYGAAABoEVr27E3umOXcdYktd2xa9t2Omkyntq2bae2GdRtpn+7lm23mcZe98Hzvt/3/f/xHETEBOD/rAv3WrLm77J2aBZ/c6W/cI46fDH2awPeE84daQagdNuuhjv/6ASgSp8oo790LA7AqX5klLZf68rOBtwaz4i7/+bVjd1/VNZFdIuOiY6Ojo6J7tMwzIhL4zlnH715ffvw8Oo6j+a/xETLmOi+zcupanXsarhjDfHDHZJM+cNYWKOBI4aFKspkkdwiYkgytYpuMMnsMuiSSrMHfNEpiyZtheG0loZzr/3mqmp7jfrsPV8ovnxHo8l7f9DUuUh9zqYQhecJGs660BNwmlFAk3mTgFIfqO6p8+hy4D+SjFV0JcmnngBOCJ5z0WwhyWZIovl6uEDTX6EcTe/3E4NpPLO/2EyTeb8pumXT8N0yog5Nr3IumkPTqcA6ah97q5pepfq0orvCG8AhBX831gJLzWWWwV1TT/zRyRyXAWhG5cubj7ME2QzAaTNkSwBfZlEWpKQpeNUbwGBz/AtXzF0Fnur4hXCeRv1xRTfxROxTpZRTxYrm8Bl9JC4u7q5IT4iLO735Z7jdFvtmzdYOLQPEiI/d27Vr167v0hSRWRI4Lc7XKezqXXbIR3EcwEmxu227tp0GH1VcdYPTOZJMGV495LMfNwj+A2CGeNy+Xbt27QduyBGv/MIXnUyIj38j3sbHJ5xcUhr4YKAOAN89tB+PmFD3FbegVjWE8Sjx3AnKRtkk2RNBn0i+D4Gy1kuS53XjoRwm+AV+JMnsBlDOE099ganiX6j7C9aBcp3YBO1FXWY44HuUjsBIKyLFbVdjra146afCZTEMlfNJ2qCtfTPnQQPdVJXzfdEHC8V+qIu/J8mGGpuTyv2Z6KraIGJ13XRbAJ+jtFtBHsl3n1nm5jjHRBRKZZPMbKWBVwUfmEK8+A1JYqAG+8QIU7ghmlmD5aqkIBQ6QvvlT80kuUtssVtTK15ovJ6SLKgB97skmbdvQC0/oTVW6KXo5vpe/KSbJjbooA5PJZkaYhEir2VkP55VCKFn6QD8cjJJdgAQazfbsePKwzMCDbgoQteQ5BEAo4R8Hj+7UwVj4xTuq0iyoHxoJsmC6roh4pTmX1XpoyS5GFbBObykM9D6Ec3GW/OT+32SrwIcwegaXdbh/fv3H0j8QJIPygLw3KOROecj3QwcGxQ9KGaKjTIBFXNJ5lbU/SYuaD4d2L9//6ELaSR5xd86oGilyFM0m5P8qzUN0Jgk1wJbHOikzmjKAn9I11FvDZA8E6EznPcdKueRzKmg+1Vc0hh9P8EL1hWO/5RPkxlrW5QPglVYTZJNHSAnS535sKkVqVuqKoDgvpvu5umY5GdBelegYo6J30SiBR9WhNuhJk0nVoNBK/yfkLzvud5uUWXUpXygy0tOTv74nyDfRagAeFTpu/l2noJDTKXsqgEgIp1kfhXdYLFPk5ucnJycIsjbha2rUWBmpQfsg3YkOWGl3ZrBuOJeqL+/f9BXsYLDDUj36vPyRYImfvjw4cOHxbSOgCz8liS/1E0W8zTnAgICAkJ+OiHY0WEWwrgl2EIy47HdWltxC+qLYg2A0vNXfasCsFw88lSNg3GnK6KjbqcYoDkNpd8jMdxRFsEBQt5S62i33VR/iljAPYlM/17X29hUE1gi1mmKvCGZX1UTp8JSMd5BlsER0N0hGtmjldgNBGWSfFFGs1ckwqKGIv0b1XySPOtk6m8xyzHmwDFwwBFOrl6jXdDcVD2RBLjaSPJx58IASi2jHGmV2w2STB73bfnKzXZQtoCpfmKvI2T9AfPdxVOxXzRUlfioaqEZKO7o7grj9TFI3NH8JNJLAB0E+Tzu0IVUygfFgFNimhk0EyRzcqncCQDTRLymp3jup9oothiqRe3pr2FhZ/HEQ9dAhUGqnzWR4q6LConm/kGUuOuiKp1Lkl0BROcIg09qAjgtppvCYJU2rrCYbuwHwe9VG0SsoTKKD/vbwtISaSSXAcBIkunhGqfj4mFhTfUCksugbf7RzItK+EKsh3araAAA3x3MMZC+LhwAJos25tD5toGU2V6QbcQEjft5kvlVVH1Eb0PoOHt8VMNgWF1nz5kp3sJ7ypmDTaAPXG27vr0a9B0TbQv8dAhv3dVwy2AAA6493BygK7zAdq4/1JWj1iTYbtoSVg8sA6XPkvs3hztZAJ92S8/defLw+r4/y0DtNPLmvUXeGoSvux7XCmqXYUlX/sb/XgNWUDggAAYAALAYAJ0BKuQAIwA+SSCNRSKhoZPq7WgoBIS2NvcmJBAHICVVyfe3fz30O6p/Q/wJ/S+BpJT61++v7D81v8p74v8l/K/cL+cPYA/Sf/Xf2HrH/th6gP6D/Uv+N/pfeE/wn7Ge4T+yeoJ/Rf7v/+PaU/zfsEegT/Jv77/9fZo/33/l/3HwT/th+5PwKfsF/7vYA9AD0AACrHxKIYwYoZAiWJgEIt1ph5EJX/LKz092vCZUFVErJUrpEpun8Geyu0H5iYBNY1dEUj5f46eYyxwAAP72iMS+dYEEe/AKBb4px+dapAYf//JoioTU//9df/i8Y6fPYMKOAJXbTn/R3/22Plt4ayclWIgcJb7MC5aYnAR8jO4fC9q4EH7X8TQxrzNbCMcGPdH7jC7b+aojQ35jxHcUW49tVSdEp0K788gwFAxNmC/UAxONfw0M6Wm1bUD7vvZ+Zni6ju8tf6P4uYd1kdCf1Jpo/2iqaFtWui1ja7/9xAoG+XF6qtW4ol5NxL8D8sPrw8HFvR168hd7RdoYzuwDPOxOBkH1AwQrNtsCvrM9Ty5sg5/9+NUv91szh2La7Sl7paGThxwxZHw7t7zjRYpvDWfMQygeLvryC7ncnVMn62j2NVzdJP7wObanYRoRvBYUXwIMYS5QsZiarZZ/Z6uBZMfopXxxFstYx8m45eZeeu1oNVdVxGRfeKKXZ3S6+pb+1jYPB0+NRUBDoAQjUjt36JK3hHG8hnRm7UL0QoGb7zvpRhRVKjbXMuk67iD33iUqMDyawsp7mwktksVYYBl1PBowx6ezA1TMErP1WdSkDSzgQvdWhO8xmCy0JGg9VU78vIVD3T83N6iMngnUkSu4vd+Au8J5JZ3GxqljBbTr7mQBe9ydVFNhnSratf1i/T1SSwwOor/UFKJ3sqkSIxFIoUrBGPQvvtmKoB2a5NZ7gOH5Jzn8wJ5tJpTYJ1dwIq2ZWw9XNyMPKqAX5Vh+EzXvme+6jsicxaeR5dqIPsmOMqTp1U8zwCDjnQuwulkqW7SV/ij9V2hSIxXPguou+n4TpjyGRQRx/hvdUtjns40FVep3mFEXujmg/NDmTBHLau0wFQStHz6p6xd2ACAh9SMM91wuBXWTTjqlT2s3KXB5Azwq+5VOW+6jsAJDPhvHk2BSmltA7eYpK4wZtyhkFwt/oSgqCCiORvqZLSFI4/88Wl6wbb71QxINIQcAmHGieysZp4sgi+Q2x1dTdQPqZ//921/+tCf/724ESFn6kvCIC5mivEQEtKwwXpscEr8mcdCQOkg4iZO+wZs2Zv/N5fZDmz49PHT4DS3B/2IsviHQVxk6o+0f5YjoffZI+erPoJprhbNgfvI1cd0+x+qm7epEBnpf5L9GPB8HjxID93Uy2TRURwQz/+zfZvI63MgyaIuHo+oE4ZBvzVRruump1K+tEeDHgmPI4Lm1K4VZHO9nvDWunrSmnivwT8LejkQ9nYO4m+0BlsN+Wj6tMHF7RyXUYIsJq1Oke0o2GBdXyalxMapSit1u4kG5YKzTcLRn6wJoSl1eg6SxZE3gnR8QfJ7BOJTlzWfcPuc9yOhaMFumQeRVWKrLtvHPKle0Q1G+ad2QRdvGDcIDpKDiNUzS5q/P3pobFA0eDZxdn4o1wlP5DClTS8iK73JktLT55/aLF5/kMK0TcKsNvD44bJjyYVsN8U+JqgTfrFyv1aKpdF1Mi84Tz2rNH77MzI4xRuCBYgPcqu+pULK0OLR4o09gm3e9Ph2uQKiaLFxbnBBZIS32e4o+VJzOQEC9KF8jcH9Ht0Gg9L0vlf5hc+URePMO6WP/OanWOL1my11Pv72qfPjQuVQYnGAQP2j/OlldZhOLK2ZmzeiuOBiomOd3p6CUJ4VMpvSMkcs3v4P0a7oHgMldFTheTquT9KohxM0zGtN3HKRy6zjKYbA0hA1WYXgGf9ffgeCHxAzVI4vOI72f1CB68xp05ga6K7UGajDhmp7IJ6V+hFkrnWT+DVSzoosW5Kt0PSCeX/yk0AWWGPfOMVkNKQAAAAAAAAAAAAAAAAAAAA==" alt="INTERSPORT logo" loading="eager">
-  <h1 id="heading">Κατέβασε το INTERSPORT App</h1>
-  <p id="description">Διαθέσιμο για iOS και Android.</p>
-  <div class="stores">
-    <a class="store store--apple" href="https://apps.apple.com/us/app/intersport-greece/id6449537338" aria-label="Download INTERSPORT on the Apple App Store">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.54c.02 2.14 1.88 2.85 1.9 2.86-.02.05-.3 1.03-.98 2.05-.59.88-1.2 1.76-2.16 1.78-.95.02-1.25-.57-2.34-.57-1.08 0-1.42.55-2.32.59-.94.04-1.65-.96-2.24-1.84-1.21-1.75-2.13-4.94-.89-7.1a3.47 3.47 0 0 1 2.94-1.79c.92-.02 1.78.63 2.34.63.56 0 1.62-.78 2.73-.66.47.02 1.79.19 2.64 1.44-.07.04-1.6.93-1.62 2.61ZM15.3 7.33a3.3 3.3 0 0 0 .75-2.45 3.38 3.38 0 0 0-2.18 1.16 3.15 3.15 0 0 0-.78 2.38 2.82 2.82 0 0 0 2.21-1.09Z" transform="translate(-1 -1)"/></svg>
-      <span><small id="apple-small">Download on the</small><strong>App Store</strong></span>
-    </a>
-    <a class="store store--google" href="https://play.google.com/store/apps/details?id=gr.intersport.app&amp;hl=en" aria-label="Get INTERSPORT on Google Play">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 2.5c-.32.23-.5.65-.5 1.22v16.56c0 .57.18.99.5 1.22L13.1 12 3.5 2.5Zm1.3-.42L14.5 11l2.8-2.8L5.4 1.75c-.23-.12-.43-.17-.6-.17Zm13.8 6.85-3.16 3.07 3.16 3.07 3.6-2.03c1.07-.61 1.07-1.47 0-2.08l-3.6-2.03ZM14.5 13l-9.7 8.92c.17 0 .37-.05.6-.17l11.9-6.45-2.8-2.3Z"/></svg>
-      <span><small id="google-small">GET IT ON</small><strong>Google Play</strong></span>
-    </a>
-  </div>
-  <div class="foot" id="footer">INTERSPORT Greece · Official app download links</div>
-</main>
-<script>
-(function () {
-  const translations = {
-    el: {title:'Κατέβασε το INTERSPORT App', description:'Διαθέσιμο για iOS και Android.', apple:'Διαθέσιμο στο', google:'Διαθέσιμο στο', footer:'INTERSPORT Greece · Σύνδεσμοι λήψης εφαρμογής', appleLabel:'Λήψη του INTERSPORT από το App Store', googleLabel:'Λήψη του INTERSPORT από το Google Play'},
-    en: {title:'Get the INTERSPORT App', description:'Available for iOS and Android.', apple:'GET IT ON', google:'GET IT ON', footer:'INTERSPORT Greece · Official app download links', appleLabel:'Download INTERSPORT on the Apple App Store', googleLabel:'Get INTERSPORT on Google Play'}
-  };
-  function setLanguage(lang) {
-    const t = translations[lang] || translations.en;
-    document.documentElement.lang = lang;
-    document.title = t.title;
-    document.querySelector('meta[name="description"]').content = t.description;
-    document.getElementById('heading').textContent = t.title;
-    document.getElementById('description').textContent = t.description;
-    document.getElementById('apple-small').textContent = t.apple;
-    document.getElementById('google-small').textContent = t.google;
-    document.getElementById('footer').textContent = t.footer;
-    document.querySelector('.store--apple').setAttribute('aria-label', t.appleLabel);
-    document.querySelector('.store--google').setAttribute('aria-label', t.googleLabel);
-    document.querySelectorAll('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === lang)));
-  }
-  document.querySelectorAll('[data-lang]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
-  const queryLang = new URLSearchParams(window.location.search).get('lang');
-  setLanguage(queryLang === 'en' ? 'en' : 'el');
-})();
-</script>
+  <main class="panel">
+
+    <nav class="language-switch" aria-label="Language / Γλώσσα">
+      <button type="button" data-lang="el" aria-pressed="true">ΕΛ</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </nav>
+
+    <img
+      class="brand-logo"
+      src="https://intersportgrazure.lhscdn.com/uploads/sites/494076/siteimage-logonormal.png?lm=78b8fb37bb35720875ab269748147334"
+      alt="INTERSPORT logo"
+      loading="eager"
+    >
+
+    <h1 id="heading">Κατέβασε το INTERSPORT App</h1>
+
+    <p id="description">Διαθέσιμο για iOS και Android.</p>
+
+    <div class="stores">
+
+      <a
+        class="store store--apple"
+        href="https://apps.apple.com/us/app/intersport-greece/id6449537338"
+        aria-label="Λήψη του INTERSPORT από το App Store"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.05 12.54c.02 2.14 1.88 2.85 1.9 2.86-.02.05-.3 1.03-.98 2.05-.59.88-1.2 1.76-2.16 1.78-.95.02-1.25-.57-2.34-.57-1.08 0-1.42.55-2.32.59-.94.04-1.65-.96-2.24-1.84-1.21-1.75-2.13-4.94-.89-7.1a3.47 3.47 0 0 1 2.94-1.79c.92-.02 1.78.63 2.34.63.56 0 1.62-.78 2.73-.66.47.02 1.79.19 2.64 1.44-.07.04-1.6.93-1.62 2.61ZM15.3 7.33a3.3 3.3 0 0 0 .75-2.45 3.38 3.38 0 0 0-2.18 1.16 3.15 3.15 0 0 0-.78 2.38 2.82 2.82 0 0 0 2.21-1.09Z" transform="translate(-1 -1)"/>
+        </svg>
+        <span>
+          <small id="apple-small">Διαθέσιμο στο</small>
+          <strong>App Store</strong>
+        </span>
+      </a>
+
+      <a
+        class="store store--google"
+        href="https://play.google.com/store/apps/details?id=gr.intersport.app&amp;hl=en"
+        aria-label="Λήψη του INTERSPORT από το Google Play"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3.5 2.5c-.32.23-.5.65-.5 1.22v16.56c0 .57.18.99.5 1.22L13.1 12 3.5 2.5Zm1.3-.42L14.5 11l2.8-2.8L5.4 1.75c-.23-.12-.43-.17-.6-.17Zm13.8 6.85-3.16 3.07 3.16 3.07 3.6-2.03c1.07-.61 1.07-1.47 0-2.08l-3.6-2.03ZM14.5 13l-9.7 8.92c.17 0 .37-.05.6-.17l11.9-6.45-2.8-2.3Z"/>
+        </svg>
+        <span>
+          <small id="google-small">Διαθέσιμο στο</small>
+          <strong>Google Play</strong>
+        </span>
+      </a>
+
+    </div>
+
+    <div class="foot" id="footer">
+      INTERSPORT Greece · Σύνδεσμοι λήψης εφαρμογής
+    </div>
+
+  </main>
+
+  <script>
+    (function () {
+      const translations = {
+        el: {
+          title: 'Κατέβασε το INTERSPORT App',
+          description: 'Διαθέσιμο για iOS και Android.',
+          apple: 'Διαθέσιμο στο',
+          google: 'Διαθέσιμο στο',
+          footer: 'INTERSPORT Greece · Σύνδεσμοι λήψης εφαρμογής',
+          appleLabel: 'Λήψη του INTERSPORT από το App Store',
+          googleLabel: 'Λήψη του INTERSPORT από το Google Play'
+        },
+        en: {
+          title: 'Get the INTERSPORT App',
+          description: 'Available for iOS and Android.',
+          apple: 'Download on the',
+          google: 'GET IT ON',
+          footer: 'INTERSPORT Greece · Official app download links',
+          appleLabel: 'Download INTERSPORT on the Apple App Store',
+          googleLabel: 'Get INTERSPORT on Google Play'
+        }
+      };
+
+      function setLanguage(lang) {
+        const selectedLang = translations[lang] ? lang : 'el';
+        const t = translations[selectedLang];
+
+        document.documentElement.lang = selectedLang;
+        document.title = t.title;
+        document.querySelector('meta[name="description"]').content = t.description;
+        document.getElementById('heading').textContent = t.title;
+        document.getElementById('description').textContent = t.description;
+        document.getElementById('apple-small').textContent = t.apple;
+        document.getElementById('google-small').textContent = t.google;
+        document.getElementById('footer').textContent = t.footer;
+
+        document.querySelector('.store--apple')
+          .setAttribute('aria-label', t.appleLabel);
+
+        document.querySelector('.store--google')
+          .setAttribute('aria-label', t.googleLabel);
+
+        document.querySelectorAll('[data-lang]').forEach(button => {
+          button.setAttribute(
+            'aria-pressed',
+            String(button.dataset.lang === selectedLang)
+          );
+        });
+      }
+
+      document.querySelectorAll('[data-lang]').forEach(button => {
+        button.addEventListener('click', () => {
+          setLanguage(button.dataset.lang);
+        });
+      });
+
+      const queryLang = new URLSearchParams(window.location.search).get('lang');
+      setLanguage(queryLang === 'en' ? 'en' : 'el');
+    })();
+  </script>
 </body>
 </html>
